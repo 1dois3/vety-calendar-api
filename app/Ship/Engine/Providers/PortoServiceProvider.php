@@ -11,6 +11,7 @@ use App\Ship\Engine\Butlers\ShipButler;
 use App\Ship\Parents\Providers\MainProvider;
 use App\Ship\Parents\Providers\RoutesProvider;
 use Barryvdh\Cors\ServiceProvider as CorsServiceProvider;
+use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Prettus\Repository\Providers\RepositoryServiceProvider;
 use Vinkla\Hashids\Facades\Hashids;
@@ -86,6 +87,10 @@ class PortoServiceProvider extends MainProvider
     public function register()
     {
         parent::register();
+
+        if ($this->app->environment() !== 'production') {
+            $this->app->register(IdeHelperServiceProvider::class);
+        }
 
         // Register Engine Facade Classes
         $this->app->alias(ShipButler::class, 'ShipButler');

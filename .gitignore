@@ -12,3 +12,6 @@ storage/logs/laravel.log
 /public/uploads/
 /laradock*/
 /storage/*.index
+.phpstorm.meta.php
+_ide_helper.php
+.idea

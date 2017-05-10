@@ -39,10 +39,10 @@
         <env name="QUEUE_DRIVER"        value="sync"/>
 
         <env name="DB_CONNECTION"       value="testing_sqlite_in_memory"/>
-        <env name="DB_HOST"             value="127.0.0.1"/>
+        <env name="DB_HOST"             value="mysql"/>
         <env name="DB_PORT"             value="3306"/>
-        <env name="DB_NAME"             value="homestead"/>
-        <env name="DB_USERNAME"         value="homestead"/>
-        <env name="DB_PASSWORD"         value="secret"/>
+        <env name="DB_NAME"             value="naokero"/>
+        <env name="DB_USERNAME"         value="naokero"/>
+        <env name="DB_PASSWORD"         value="naokero"/>
     </php>
 </phpunit>
